@@ -323,7 +323,7 @@ body {
           }
           span {
             font-weight: 400;
-            font-size: x-large;
+            font-size: 5vw;
             color: $veryDarkGreyBlue;
           }
         }
@@ -343,7 +343,7 @@ body {
             height: 50%
           }
           .addText{
-            font-size: 2vw;
+            font-size: 5vw;
           }
           @include mobile {
             margin: 10px 0;
