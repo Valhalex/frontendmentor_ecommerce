@@ -465,7 +465,7 @@ body .content .right .bottom .quantity img:hover {
 
 body .content .right .bottom .quantity span {
   font-weight: 400;
-  font-size: 5vw;
+  font-size: x-large;
   color: #1d2025;
 }
 
@@ -496,7 +496,13 @@ body .content .right .bottom .cartBtn {
 }
 
 body .content .right .bottom .cartBtn .addText {
-  font-size: 5vw;
+  font-size: 2vw;
+}
+
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  body .content .right .bottom .cartBtn .addText {
+    font-size: 5vw;
+  }
 }
 
 @media screen and (min-width: 300px) and (max-width: 900px) {
