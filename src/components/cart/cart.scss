@@ -1,0 +1,28 @@
+.shoppingCart{
+    background-color: blue;
+    display: none;
+    
+    height:200px;
+    width:300px;
+    position: absolute;
+    right: 5%;
+    z-index: 2;
+    .top{
+      height: 20%;
+      background-color: green;
+      width:100%;
+      display: flex;
+      align-items: center;
+      span{
+        margin-left:5%
+      }
+    }
+    .bottom{
+      height:80%;
+      background-color: red;
+    }
+  }
+
+  .active{
+    display: flex !important;
+  }

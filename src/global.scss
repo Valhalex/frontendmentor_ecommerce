@@ -1,0 +1,19 @@
+$paleOrange: hsl(25, 100%, 94%);
+$orange: hsl(26, 100%, 55%);
+$veryDarkGreyBlue: hsl(220, 13%, 13%);
+$darkGrayblue: hsl(219, 9%, 45%);
+$grayishBlue: hsl(220, 14%, 75%);
+$lightGrayisBlue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 0%);
+// black with 75% opacity for lightbox background)
+$opaqueBlack: rgba(
+  $color: #000000,
+  $alpha: 0.75,
+);
+
+@mixin mobile {
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    @content;
+  }
+}
+
