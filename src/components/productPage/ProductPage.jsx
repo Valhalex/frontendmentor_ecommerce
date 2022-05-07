@@ -21,15 +21,24 @@ const ProductPage = () => {
         try {
             let title = document.querySelector(".productName").textContent;
             let quantity = parseInt(document.querySelector(".numToBuy").textContent);
-            let price = parseFloat(document.querySelector(".price").textContent);
+            let price = document.querySelector(".price").textContent;
             // preferably, we would have a database full of items where we would connect to the database, 
             //search for the id the user clicked on
             //and get the information that way....
             // But this project will have a small scope
             //so for me it is ok to simply make a table that will only hold 1 item on our website.
             //I am also choosing to do it this way just for practice working with firebase.
+            
+            //remove all symbols
+            const regex = /\d+/g;
+            price = parseFloat(price.match(regex));
+
+
+
             await addDoc(collection(db, 'Cart'), {
-                
+                //because this is a simple project, I won't be creating a seperate table of items, and rather I will just be hardcoding
+                //an id as apart of this item, I am aware this is not best practice.
+                id:1,
                 title:title,
                 image: thumbnail1,
                 quantity: quantity,

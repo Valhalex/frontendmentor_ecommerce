@@ -10,7 +10,7 @@ import image1 from '../../challengeAssets/images/image-product-1.jpg';
 const Cart = ({ cartMenuOpen, setCartMenuOpen }) => {
 
     const [cart, setCart] = useState([])
-    /* function to get all tasks from firestore in realtime */
+    /*  get all tasks from firestore in realtime */
     useEffect(() => {
         // connect to DB, access 'cart' table return ordered data by the time it was added
         //this will be a nice feature to remember on a larger project so that it will display the users items 
@@ -25,7 +25,7 @@ const Cart = ({ cartMenuOpen, setCartMenuOpen }) => {
         })
     }, [])
 
-
+    
   
 
 
