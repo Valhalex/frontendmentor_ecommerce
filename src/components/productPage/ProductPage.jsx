@@ -9,7 +9,7 @@ import plus from '../../challengeAssets/images/icon-plus.svg';
 import minus from '../../challengeAssets/images/icon-minus.svg';
 import { useState } from 'react';
 import { db } from '../../firebase';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { doc, setDoc, Timestamp } from 'firebase/firestore';
 
 
 
@@ -34,11 +34,10 @@ const ProductPage = () => {
             price = parseFloat(price.match(regex));
 
 
-
-            await addDoc(collection(db, 'Cart'), {
-                //because this is a simple project, I won't be creating a seperate table of items, and rather I will just be hardcoding
-                //an id as apart of this item, I am aware this is not best practice.
-                id:1,
+            //normally we would need to increment the id for each unique item in the cart
+            //but since this is a simple app with only 1 item, 
+            //ill set the id to 1
+            await setDoc(doc(db, "cart", "1"),{
                 title:title,
                 image: thumbnail1,
                 quantity: quantity,
@@ -47,10 +46,12 @@ const ProductPage = () => {
                 created: Timestamp.now()
             })
             
+
+            console.log("added to cart")
         } catch (err) {
             alert(err)
         }
-        console.log("added to cart")
+        
     }
     
     // handles the plus and minus buttons to add or subtract quantity
