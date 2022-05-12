@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Valhalex/frontendmentor_ecommerce)
-- Live Site URL: [Add live site URL here](https://sneaker-company.netlify.app/)
+- Solution URL: [github](https://github.com/Valhalex/frontendmentor_ecommerce)
+- Live Site URL: [live](https://sneaker-company.netlify.app/)
 
 ## My process
 
